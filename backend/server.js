@@ -1,3 +1,4 @@
+
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const SwaggerParser = require('swagger-parser');
@@ -6,8 +7,11 @@ const path = require('path');
 const axios = require('axios');
 const yaml = require('js-yaml');
 const cheerio = require('cheerio');
+const cors = require('cors');
 
+// Initialize express app
 const app = express();
+app.use(cors());
 app.use(fileUpload());
 app.use(express.json());
 
